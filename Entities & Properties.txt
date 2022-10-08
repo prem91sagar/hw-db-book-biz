@@ -1,0 +1,13 @@
+Entities & Properties
+
+ISBN
+Author
+Royalty Amount
+Currency
+Genre
+Publisher
+Editors
+Order Date
+Order ID
+Customer ID
+
