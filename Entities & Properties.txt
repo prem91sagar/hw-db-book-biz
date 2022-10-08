@@ -1,13 +1,35 @@
 Entities & Properties
 
+Entity 1:
+Book 
 ISBN
+Name
+Price
 Author
 Royalty Amount
 Currency
 Genre
 Publisher
 Editors
+
+Author
+Name
+Phone Number
+
+Publisher
+Name
+Address
+
+Editors
+Name
+Address
+
+Sales
 Order Date
 Order ID
 Customer ID
+Book list 
+ISBN
+
+
 
