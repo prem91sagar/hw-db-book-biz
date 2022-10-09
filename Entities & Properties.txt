@@ -1,35 +1,74 @@
 Entities & Properties
 
-Entity 1:
-Book 
-ISBN
-Name
-Price
+/*
+Entities
+Book
 Author
-Royalty Amount
+Publisher
+Editor
+Sales
+Customer
+*/
+
+Properties
+
+?Book?
+ISBN
+Title
+Price
+Author ID
+Royalty
 Currency
 Genre
-Publisher
-Editors
+PublisherID
+EditorID
 
-Author
+?Author?
+Author ID
 Name
-Phone Number
+Contact
 
-Publisher
+?Publisher?
+PublisherID
 Name
+Contact
 Address
 
-Editors
+?Editor?
+EditorID
 Name
+Contact
 Address
 
-Sales
-Order Date
-Order ID
+?Sales?
+OrderID
+OrderDate
+CustomerID
+ISBN 
+Amount
+
+?Customer?
 Customer ID
-Book list 
-ISBN
+Name
+Contact
+BillingAddress
+ShippingAddress
 
+/* Unique Identifiers
+ISBN (pk)
+Author ID (pk)
+Publisher ID (pk)
+Editor ID (pk)
+Order ID (pk)
+Customer ID (pk)
+*/
+
+/*Relationships
+Book, Author, 1:N
+Book, Publisher, N:1
+Book, Editor, N:N
+Sales, Customer, N:1
+Book, Sales, N:N
+*/
 
 
