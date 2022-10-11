@@ -3,7 +3,7 @@ SELECT a.AuthorID, COUNT(b.ISBN) as BookCount
 FROM Author as a
 LEFT JOIN Book as b
 ON a.AuthorID = b.AuthorID 
-GROUP BY a.AuthorName;
+GROUP BY a.Name;
 
 -- Authors per book --  
 SELECT b.ISBN, COUNT(a.AuthorID) as AuthorsCount 
@@ -63,27 +63,12 @@ SELECT sa.OrderID, sa.CustomerID, sa.Amount as OrderAmount
 FROM Sales as sa
 INNER JOIN Customer as c
 ON c.CustomerID = sa.CustomerID
-INNER JOIN Orders as o
-ON o.OrderID = sa.OrderID;
+INNER JOIN Sales as s
+ON s.OrderID = sa.OrderID;
 
 -- Orders per customer -- 
 SELECT c.CustomerID, count(sa.OrderID) as Orders_for_customer
 FROM Sales as sa
-INNER JOIN Customers as c
+INNER JOIN Customer as c
 ON c.CustomerID = sa.CustomerID
 GROUP by c.Name;
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
