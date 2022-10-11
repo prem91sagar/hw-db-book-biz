@@ -1,14 +1,5 @@
 -- --------------------------------------
---  POPULATE Authors
--- --------------------------------------
-
-INSERT INTO `Author` VALUES (001, 'Prem Sagar', '67345348901' );
-INSERT INTO `Author` VALUES (002, 'Paulo Cohelo', '23345348901');
-INSERT INTO `Author` VALUES (004,'Lewis Lin', '78345348901');
-INSERT INTO `Author` VALUES (005, 'Deepak Malhotra', '90345348901');
-INSERT INTO `Author` VALUES (006,'Simon Sinek', '14345348901');
--- --------------------------------------
---  POPULATE Publishers
+--  POPULATE Publisher
 -- --------------------------------------
 
 INSERT INTO `Publisher` VALUES (1001, 'Khatabook', 12345678942, '23 Pacific Street, Cambridge, MA 02142');
@@ -18,7 +9,18 @@ INSERT INTO `Publisher` VALUES (1004, 'HBR', 12345645901, '23 Suffolk Street, Ca
 INSERT INTO `Publisher` VALUES (1005, 'MIT', 12345623901, '75 Pacific Street, Cambridge, MA 02122');
 
 -- --------------------------------------
---  POPULATE Editors
+--  POPULATE Author
+-- --------------------------------------
+
+INSERT INTO `Author` VALUES (001, 'Prem Sagar', '67345348901');
+INSERT INTO `Author` VALUES (002, 'Paulo Cohelo', '23345348901');
+INSERT INTO `Author` VALUES (003,'Lewis Lin', '78345348901');
+INSERT INTO `Author` VALUES (004, 'Deepak Malhotra', '90345348901');
+INSERT INTO `Author` VALUES (005,'Simon Sinek', '14345348901');
+
+
+-- --------------------------------------
+--  POPULATE Editor
 -- --------------------------------------
 
 INSERT INTO `Editor` VALUES (2001, 'Aukriti', 12345678901, '70 Pacific Street, Cambridge, MA 02142');
@@ -32,18 +34,11 @@ INSERT INTO `Editor` VALUES (2005, 'Leena', 123345678956, '34 Sidney Street, Cam
 --  POPULATE BOOKS
 -- --------------------------------------
 
-INSERT INTO `Book` VALUES (9780615895772,'Start with why',18, 004, 5, 'USD','Fiction', 002, 005);
-INSERT INTO `Book` VALUES (9780615895773,'Alchemist', 12, 002, 2, 'USD', 'Fiction', 003, 001);
-INSERT INTO `Book` VALUES (9780615895774,'Negotiation', 28, 004, 4, 'USD', 'Fiction', 001, 002);
-INSERT INTO `Book` VALUES (9780615895775,'Let me read', 10, 001, 1, 'USD', 'Non-Fiction', 004, 003);
-INSERT INTO `Book` VALUES (9780615895776,'Power', 45, 005, 10, 'USD', 'Fiction', 005, 004);
-
--- --------------------------------------
---  POPULATE Sales
--- --------------------------------------
-
-INSERT INTO `Orders` VALUES (4001,09122022,5001,9780615895772,18);
-INSERT INTO `Orders` VALUES (4002,09122022,5002,9780615895775,10);
+INSERT INTO `Book` VALUES (9780615895772,'Start with why',18, 004, 5, 'USD','Fiction', 1001, 2005);
+INSERT INTO `Book` VALUES (9780615895773,'Alchemist', 12, 002, 2, 'USD', 'Fiction', 1002, 2001);
+INSERT INTO `Book` VALUES (9780615895774,'Negotiation', 28, 003, 4, 'USD', 'Fiction', 1003, 2002);
+INSERT INTO `Book` VALUES (9780615895775,'Let me read', 10, 001, 1, 'USD', 'Non-Fiction', 1002, 2003);
+INSERT INTO `Book` VALUES (9780615895776,'Power', 45, 005, 10, 'USD', 'Fiction', 1005, 2004);
 
 -- --------------------------------------
 --  POPULATE Customer
@@ -52,4 +47,11 @@ INSERT INTO `Orders` VALUES (4002,09122022,5002,9780615895775,10);
 INSERT INTO `Customer` VALUES (5001, 'Prem S', 18572531469, '70 Amherst, Cambridge, MA 02142','70 Amherst, Cambridge, MA 02142');
 INSERT INTO `Customer` VALUES (5002, 'James', 18572545469, '70 Essex Street, Cambridge, MA 02139','70 Amherst, Cambridge, MA 02142');
 
+
+-- --------------------------------------
+--  POPULATE Sales
+-- --------------------------------------
+
+INSERT INTO `Sales` VALUES (4001,09122022,5001,9780615895772,18);
+INSERT INTO `Sales` VALUES (4002,09122022,5002,9780615895775,10);
 
